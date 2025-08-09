@@ -25,7 +25,7 @@
     @"%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-@for %%i in ("C:\Users\Gerardo\PycharmProjects\adk-agent-example-et\.venv") do @set "VIRTUAL_ENV=%%~fi"
+@for %%i in ("C:\Users\user\PycharmProjects\adk-agent-example-et\.venv") do @set "VIRTUAL_ENV=%%~fi"
 
 @set "VIRTUAL_ENV_PROMPT=adk-agent-example-et"
 @if NOT DEFINED VIRTUAL_ENV_PROMPT (

@@ -31,7 +31,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV 'C:\Users\Gerardo\PycharmProjects\adk-agent-example-et\.venv'
+setenv VIRTUAL_ENV 'C:\Users\user\PycharmProjects\adk-agent-example-et\.venv'
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/Scripts:$PATH:q"

@@ -2,7 +2,6 @@ import warnings
 warnings.filterwarnings("ignore", message='Field name "config_type" in "SequentialAgent" shadows an attribute in parent "BaseAgent"')
 import os
 from dotenv import load_dotenv
-from google.adk.agents import Agent
 
 print("🔍 Checking Environment...")
 

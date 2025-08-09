@@ -53,7 +53,7 @@ export-env {
       }
     }
 
-    let virtual_env = 'C:\Users\Gerardo\PycharmProjects\adk-agent-example-et\.venv'
+    let virtual_env = 'C:\Users\user\PycharmProjects\adk-agent-example-et\.venv'
     let bin = 'Scripts'
 
     let is_windows = ($nu.os-info.family) == 'windows'

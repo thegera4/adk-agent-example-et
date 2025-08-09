@@ -1,12 +1,11 @@
 [project]
 name = "adk-agent-example-et"
-version = "0.1.0"
+version = "1.0.0"
 description = "AI Agent example with Google ADK, LiteLLM, Enterprise level practices, DeepSeek and LM Studio"
 requires-python = ">=3.11"
 dependencies = [
-    "backoff>=2.2.1",
     "google-adk>=1.6.1",
-    "litellm>=1.74.2",
+    "litellm>=1.75.4",
     "python-dotenv>=1.1.1",
     "requests>=2.31.0",
 ]
