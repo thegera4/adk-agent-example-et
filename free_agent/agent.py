@@ -16,7 +16,7 @@ llm = LiteLlm(
 )
 
 # Create Google ADK agent
-local_agent = Agent(
+root_agent = Agent(
     name="LocalLLMAgent",
     model=llm,
     instruction="""
@@ -29,7 +29,7 @@ local_agent = Agent(
 
 # Runtime setup
 session_service = InMemorySessionService()
-runner = Runner(agent=local_agent, app_name="local_agent_demo", session_service=session_service)
+runner = Runner(agent=root_agent, app_name="local_agent_demo", session_service=session_service)
 
 
 # Ask function
@@ -51,4 +51,5 @@ async def main():
 
 
 # Run the main function
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())

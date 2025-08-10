@@ -1,5 +1,8 @@
 # Premium Google ADK Agent (using DeepSeek API)
 import warnings
+
+from free_agent.agent import root_agent
+
 warnings.filterwarnings("ignore", message='Field name "config_type" in "SequentialAgent" shadows an attribute in parent "BaseAgent"')
 import os
 import asyncio
@@ -18,7 +21,7 @@ print("🚀 Creating Premium Google ADK Agent with DeepSeek...")
 deepseek_model = LiteLlm(model="deepseek/deepseek-chat", api_key=DEEPSEEK_API_KEY,)
 
 # 1. Create Google ADK agent
-deepseek_agent = Agent(
+root_agent = Agent(
     name="PremiumDeepSeekAgent",
     model=deepseek_model,
     instruction="""
@@ -35,14 +38,14 @@ deepseek_agent = Agent(
 )
 
 print("✅ Premium DeepSeek Agent Created!")
-print(f" 🤖 Name: {deepseek_agent.name}")
+print(f" 🤖 Name: {root_agent.name}")
 print(" 🧠 Model: deepseek-chat")
 print(" 💰 Cost: $0.07 per million tokens (50% discount if used during UTC 16:30 - 00:30 = ⚠️$0.035⚠️ per million tokens)")
 print(" 🌟 Capabilities: Fast, reliable, production-ready")
 
 # 2. Set up runner and session service (ADK 1.3.0 pattern)
 session_service = InMemorySessionService()
-runner = Runner(agent=deepseek_agent, app_name="premium_agent_demo", session_service=session_service)
+runner = Runner(agent=root_agent, app_name="premium_agent_demo", session_service=session_service)
 
 
 # 3. Async helper to run and get response
@@ -94,4 +97,5 @@ async def main():
 
 
 # 5. Run it
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
